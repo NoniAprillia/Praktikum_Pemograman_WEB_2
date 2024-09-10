@@ -188,3 +188,5 @@ echo $mahasiswa1->tampilkanData();
 $mahasiswa1->tampilkanData(): Memanggil kembali metode tampilkanData pada objek $mahasiswa1. Kali ini, output yang dihasilkan akan menunjukkan bahwa nilai nim telah diperbarui sesuai dengan nilai baru yang diatur sebelumnya.
 
 <h3>OUTPUT</h3>
+
+![Screenshot (477)](https://github.com/user-attachments/assets/787a3f4c-a7b0-4ae3-8cab-158853318561)
