@@ -1,18 +1,4 @@
-<h1>Object-Oriented Programming</h1>
-
-## Pendahuluan
-Pemrograman Berorientasi Objek atau yang biasa disebut dengan OOP adalah suatu metode pemrograman yang berorientasi pada objek. 
-Program-program yang telah ada merupakan gabungan dari beberapa komponen-komponen kecil yang sudah ada sebelumnya.
-
-Pemrograman berorientasi objek memiliki beberapa keunggulan dibandingkan pemrograman prosedural:
-- Membantu melindungi data
-- Mengurangi duplikasi kode
-- Menyederhanakan kode
-- memudahkan pemahaman dan penggunaan kode
-
-Tujuan utama OOP adalah untuk mengatasi kelemahan pendekatan pemrograman konvensional.
-
-<h1>JOBSHEET - 1</h1>
+## JOBSHEET - 1
 
 <h2>Mendefinisikan Kelas dan Objek</h2>
 <b>Kelas(Class)</b>
