@@ -181,6 +181,7 @@ getNama() adalah metode yang didefinisikan di kelas Pengguna. Karena $Pengguna1 
 
 <h3>OUTPUT INHERITANCE</h3>
 
+![Screenshot (470)](https://github.com/user-attachments/assets/93f40273-13ae-4e3e-a55a-58b2279f3bd3)
 
 <h3> 3. Polymorphism </h3>
 
@@ -200,19 +201,31 @@ class Pengguna {
         $this->nama = $nama;
     }
 ```
+- Protected Attribute: Atribut protected $nama hanya bisa diakses di dalam kelas Pengguna dan subkelas yang mewarisi Pengguna.
+- Public Method setNama(): Metode ini mengatur nilai dari atribut $nama.
+- Menambahkan Metode getNama(): Untuk mendapatkan nilai atribut $nama, kamu perlu menambahkan metode getNama().
 
 ```php
-    // Method untuk mendapatkan nilai atribut nama
-    public function getNama() {
-        return $this->nama;
-    }
-
-    // Method untuk mengakses fitur (akan dioverride oleh class turunan)
+    class Mahasiswa extends Pengguna {
+    // Override method aksesFitur untuk menampilkan "Fitur Mahasiswa"
     public function aksesFitur() {
-        return $this->nama;
+        echo "Fitur Mahasiswa";
+    }
+}
+
+// Definisi class Dosen yang merupakan turunan dari class Pengguna
+class Dosen extends Pengguna {
+    // Override method aksesFitur untuk menampilkan "Fitur Dosen"
+    public function aksesFitur() {
+        echo "Fitur Dosen";
     }
 }
 ```
+- Method Overriding: Mahasiswa dan Dosen mengubah implementasi dari metode aksesFitur() yang diwarisi dari Pengguna.
+- Polimorfisme: Jika kita memiliki variabel bertipe Pengguna yang menunjuk ke objek Mahasiswa atau Dosen, metode aksesFitur() yang dipanggil adalah versi yang di-override oleh kelas tersebut.
+
+<h3>OUTPUT POLYMORPHISM</h3>
+
 
 <h3> 4. Abstraction</h3>
 
