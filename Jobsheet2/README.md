@@ -228,3 +228,5 @@ $Dosen1 = new Dosen();
 Membuat objek baru untuk menyimpan data nama Dosen, nip Dosen, dan Matakuliah yang dosen ajar
 
 <h3>OUTPUT</h3>
+
+![Screenshot (481)](https://github.com/user-attachments/assets/d8e7e41a-c62a-45cd-9157-9a3f98b9b22a)
