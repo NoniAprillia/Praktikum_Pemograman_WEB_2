@@ -125,8 +125,66 @@ updateJurusan: Nama metode. Nama ini digunakan untuk memanggil metode ini pada o
     return "<br> Nama: $this->nama </br> <br> NIM: $this->nim </br> <br> Jurusan: $this->jurusan </br>";
 ```
 return: Kata kunci return digunakan untuk mengembalikan nilai
-```
 
 <h3>OUTPUT</h3>
 
-![Screenshot (476)](https://github.com/user-attachments/assets/95683b57-a863-46e8-8d0a-8933c195b573)
+![Screenshot (476)](https://github.com/user-attachments/assets/48cf53b9-096d-4aa1-8ab8-5e8ff85f5806)
+
+<h3>Penggunaan Atribut</h3>
+
+```php
+class Mahasiswa {
+```
+class Mahasiswa: Mendefinisikan sebuah kelas baru dengan nama Mahasiswa. Kelas ini menjadi blueprint atau cetak biru untuk membuat objek-objek yang merepresentasikan data mahasiswa.
+
+```php
+public $nama;
+    public $nim;
+    public $jurusan;
+```
+private $nama, private $nim, private $jurusan: Atribut-atribut ini memiliki visibilitas private. Artinya, atribut ini hanya dapat diakses dari dalam kelas Mahasiswa itu sendiri.
+
+```php
+public function __construct($nama, $nim, $jurusan) {
+        $this->nama = $nama;
+        $this->nim = $nim;
+        $this->jurusan = $jurusan;
+```
+__construct(): Metode khusus yang secara otomatis dipanggil ketika objek Mahasiswa baru dibuat. Parameter: $nama: Nilai yang akan diberikan kepada atribut $nama. $nim: Nilai yang akan diberikan kepada atribut $nim. $jurusan: Nilai yang akan diberikan kepada atribut $jurusan. Function: Menginisialisasi objek Mahasiswa dengan nilai-nilai yang diberikan saat objek dibuat.
+
+```php
+public function setNim($nim) {
+        $this->nim = $nim;
+```
+setNim($nim) Untuk mengubah nilai dari atribut yang ada atau metode yang digunakan untuk memperbarui nilai atribut objek. Ini sangat berguna dalam enkapsulasi untuk memastikan bahwa atribut objek hanya dapat diubah melalui metode yang disediakan oleh kelas.
+
+```php
+$mahasiswa1 = new Mahasiswa("Noni Aprillia", "230102040", "Kombis");
+```
+$mahasiswa1: Variabel yang menyimpan referensi ke objek Mahasiswa yang baru dibuat.
+new Mahasiswa("Noni Aprillia", "230102040", "Kombis"): Perintah ini membuat sebuah objek baru dari kelas Mahasiswa dengan menggunakan konstruktor __construct.
+"Noni Aprillia": Nilai untuk atribut nama.
+"230102040": Nilai untuk atribut nim.
+"Kombis": Nilai untuk atribut jurusan.
+
+```php
+echo "Data Awal: ";
+echo $mahasiswa1->tampilkanData();
+```
+- echo "Data Awal: ": Menampilkan teks "Data Awal: " di output untuk memberi konteks bahwa data yang ditampilkan berikutnya adalah data awal objek.
+- $mahasiswa1->tampilkanData(): Memanggil metode tampilkanData pada objek
+- $mahasiswa1 yang mengembalikan string HTML dengan informasi tentang mahasiswa. Outputnya akan mencakup nama, NIM, dan jurusan yang telah diatur saat instansiasi objek.
+
+```php
+$mahasiswa1->setNim("230102041");
+```
+Mengupdate Nilai NPM
+- $mahasiswa1->setNim("230102041"): Memanggil metode setNim pada objek $mahasiswa1. Metode ini mengubah nilai atribut nim dari objek tersebut menjadi "230102041".
+
+```php
+echo "Data Setelah Pembaruan: ";
+echo $mahasiswa1->tampilkanData();
+```
+$mahasiswa1->tampilkanData(): Memanggil kembali metode tampilkanData pada objek $mahasiswa1. Kali ini, output yang dihasilkan akan menunjukkan bahwa nilai nim telah diperbarui sesuai dengan nilai baru yang diatur sebelumnya.
+
+<h3>OUTPUT</h3>
