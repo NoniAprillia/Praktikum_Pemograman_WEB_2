@@ -2,7 +2,7 @@
 
 ## Menggunakan Konsep Kelas dan Objek dalam PHP
 
-<h3>CLASS dan OBJECT</h3>
+<h3>MEMBUAT CLASS dan OBJECT</h3>
 
 - CLASS
 ```php
@@ -57,7 +57,52 @@ $Mahasiswa1->tampilkanData(): Memanggil metode tampilkanData pada objek $Mahasis
 
 echo : Menampilkan hasil yang dikembalikan oleh metode tampilkanData ke output
 
-<h3>OUTPUT CLASS DAN OBJECT</h3>
+<h3>OUTPUT</h3>
 
 ![Screenshot (475)](https://github.com/user-attachments/assets/17b67509-5729-45f7-aa84-f5440a97e644)
 
+<h3>Implementasi Constructor</h3>
+
+```php
+public function __construct($nama, $nim, $jurusan) {
+```
+__construct adalah metode khusus dalam PHP yang secara otomatis dipanggil saat objek dari kelas dibuat. Fungsinya adalah untuk menginisialisasi atribut objek dengan nilai yang diberikan. Ini memastikan bahwa objek selalu berada dalam keadaan yang valid dan konsisten sejak awal.
+
+```php
+($nama, $nim, $jurusan) {
+```
+($nama, $nim, $jurusan): Ini adalah parameter yang diterima oleh konstruktor. Parameter ini digunakan untuk menginisialisasi atribut objek saat objek dibuat. Dalam hal ini, konstruktor menerima tiga parameter: $nama, $nim, dan $jurusan.
+
+```php
+$this->nama = $nama;
+$this->nim = $nim;
+$this->jurusan = $jurusan;
+```
+- $this: $this adalah referensi ke objek saat ini. Ketika Anda berada dalam metode kelas, $this merujuk ke objek yang sedang beroperasi.
+- $this->nama = $nama: Menetapkan nilai parameter $nama ke atribut objek nama. Dengan kata lain, ini menginisialisasi atribut nama dari objek dengan nilai yang diterima oleh konstruktor.
+- $this->nim = $nim: Menetapkan nilai parameter $nim ke atribut objek nim. Ini menginisialisasi atribut nim dari objek dengan nilai yang diterima oleh konstruktor.
+- $this->jurusan = $jurusan: Menetapkan nilai parameter $jurusan ke atribut objek jurusan. Ini menginisialisasi atribut jurusan dari objek dengan nilai yang diterima oleh konstruktor.
+
+```php
+$mahasiswa1 = new Mahasiswa("Noni Aprillia", "230102040", "Komputer dan Bisnis");
+```
+new Mahasiswa("Noni Aprillia", "230102040", "Komputer dan Bisnis"): Ini adalah perintah untuk membuat objek baru dari kelas Mahasiswa. Kata kunci new digunakan untuk memanggil konstruktor kelas Mahasiswa dengan parameter yang diberikan.
+
+```php
+public function __construct($nama, $nim, $jurusan) {
+    $this->nama = $nama;
+    $this->nim = $nim;
+    $this->jurusan = $jurusan;
+}
+```
+new Mahasiswa("Noni Aprillia", "230102040", "Komputer dan Bisnis") dipanggil, konstruktor __construct dijalankan, dan atribut nama, nim, dan jurusan dari objek $mahasiswa1 diatur sesuai dengan argumen yang diteruskan.
+
+```php
+echo $mahasiswa1->tampilkanData();
+}
+```
+$mahasiswa1->tampilkanData(): Memanggil metode tampilkanData pada objek $mahasiswa1
+
+<h3>OUTPUT</h3>
+
+![Screenshot (475)](https://github.com/user-attachments/assets/17b67509-5729-45f7-aa84-f5440a97e644)
