@@ -179,8 +179,10 @@ echo $Pengguna1->getMatakuliah() . '<br>'; // Output: Pemrograman Web 2
 getNama() adalah metode yang didefinisikan di kelas Pengguna. Karena $Pengguna1 adalah objek Dosen yang mewarisi dari Pengguna,
 
 <h3> 3. Polymorphism </h3>
-Untuk Metode yang sama dapat memiliki implementasi berbeda
-dalam class yang berbeda.
+
+Definisi: Polimorfisme memungkinkan objek dari berbagai kelas untuk diperlakukan sebagai objek dari kelas yang sama melalui antarmuka yang sama. Ada dua jenis polimorfisme: polimorfisme compile-time (method overloading) dan polimorfisme runtime (method overriding).
+
+Manfaat: Mempermudah penggunaan objek dari berbagai kelas dengan cara yang konsisten dan memungkinkan implementasi metode yang berbeda tergantung pada jenis objek.
 
 ```php
 <?php
@@ -209,8 +211,10 @@ class Pengguna {
 ```
 
 <h3> 4. Abstraction</h3>
-Untuk Menyembunyikan detail implementasi dan hanya menampilkan
-fungsi penting.
+
+Definisi: Abstraksi adalah proses menyembunyikan detail implementasi yang kompleks dan hanya menampilkan fungsionalitas yang relevan kepada pengguna. Dalam OOP, abstraksi dicapai melalui penggunaan kelas dan antarmuka yang menyembunyikan detail yang tidak perlu.
+
+Manfaat: Memudahkan pengembangan dan pemeliharaan kode dengan menyediakan pandangan yang lebih sederhana dan lebih jelas dari sistem yang kompleks.
 
 ```php
 <?php
