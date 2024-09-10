@@ -58,3 +58,6 @@ $Mahasiswa1->tampilkanData(): Memanggil metode tampilkanData pada objek $Mahasis
 echo : Menampilkan hasil yang dikembalikan oleh metode tampilkanData ke output
 
 <h3>OUTPUT CLASS DAN OBJECT</h3>
+
+![Screenshot (475)](https://github.com/user-attachments/assets/17b67509-5729-45f7-aa84-f5440a97e644)
+
