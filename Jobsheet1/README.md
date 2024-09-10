@@ -1,7 +1,14 @@
 <h1>Object-Oriented Programming</h1>
 
 ## Pendahuluan
-Pemrograman Berorientasi Objek atau yang biasa disebut dengan OOP adalah suatu metode pemrograman yang berorientasi pada objek. Program-program yang telah ada merupakan gabungan dari beberapa komponen-komponen kecil yang sudah ada sebelumnya.
+Pemrograman Berorientasi Objek atau yang biasa disebut dengan OOP adalah suatu metode pemrograman yang berorientasi pada objek. 
+Program-program yang telah ada merupakan gabungan dari beberapa komponen-komponen kecil yang sudah ada sebelumnya.
+
+Pemrograman berorientasi objek memiliki beberapa keunggulan dibandingkan pemrograman prosedural:
+- OOP lebih cepat dan mudah dijalankan
+- OOP menyediakan struktur yang jelas untuk program
+- OOP membantu menjaga kode PHP tetap DRY "Jangan Ulangi Diri Anda Sendiri", dan membuat kode lebih mudah untuk dipelihara, dimodifikasi, dan di-debug
+- OOP memungkinkan pembuatan aplikasi yang dapat digunakan kembali sepenuhnya dengan kode yang lebih sedikit dan waktu pengembangan yang lebih singkat
 
 Tujuan utama OOP adalah untuk mengatasi kelemahan pendekatan pemrograman konvensional.
 
@@ -11,7 +18,6 @@ Tujuan utama OOP adalah untuk mengatasi kelemahan pendekatan pemrograman konvens
 <b>Kelas (Class)</b>
 
 ```php
-// Definisi class Mahasiswa
 class Mahasiswa
 ```
 Class : Blueprint atau template untuk menciptakan objek yang mencangkup atribut dan juga metode yang dimiliki oleh objek
@@ -25,7 +31,6 @@ Objek : Instance dari class yang memiliki atribut (properties) dan perilaku
 
 <b>Atribut</b>
 ```php
-// Atribut atau properti dari class Mahasiswa
     public $nama;
     public $nim;
     public $jurusan;
@@ -38,7 +43,6 @@ Atribut : variabel di dalam class untuk menyimpan data atau keadaan dari objek, 
 
 <b>Method</br>
 ```php
-// Method untuk menampilkan data mahasiswa
     public function tampilkanData() {
         return " <br> Nama : $this->nama </br> <br> NIM : $this->nim </br> <br> Jurusan : $this->jurusan.</br>";
 ```
@@ -46,7 +50,7 @@ Method atau metode di dalam kelas digunakan untuk melakukan operasi data dari ob
 
 <h2>Prinsip OOP</h2>
 
-- Encapsulation: Menyembunyikan detail implementasi dan hanya memberikan
+1. Encapsulation: Menyembunyikan detail implementasi dan hanya memberikan
 akses melalui metode tertentu.
 
 Contoh :
