@@ -126,4 +126,7 @@ updateJurusan: Nama metode. Nama ini digunakan untuk memanggil metode ini pada o
 ```
 return: Kata kunci return digunakan untuk mengembalikan nilai
 ```
+
 <h3>OUTPUT</h3>
+
+![Screenshot (476)](https://github.com/user-attachments/assets/95683b57-a863-46e8-8d0a-8933c195b573)
