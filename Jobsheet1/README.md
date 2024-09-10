@@ -178,31 +178,6 @@ class Pengguna {
 }
 ```
 
-// Definisi class Mahasiswa yang merupakan turunan dari class Pengguna
-class Mahasiswa extends Pengguna {
-    // Override method aksesFitur untuk menampilkan "Fitur Mahasiswa"
-    public function aksesFitur() {
-        echo "Fitur Mahasiswa";
-    }
-}
-
-// Definisi class Dosen yang merupakan turunan dari class Pengguna
-class Dosen extends Pengguna {
-    // Override method aksesFitur untuk menampilkan "Fitur Dosen"
-    public function aksesFitur() {
-        echo "Fitur Dosen";
-    }
-}
-
-// Membuat objek Dosen
-$dosen1 = new Dosen();
-
-// Memanggil method aksesFitur dari objek Dosen
-// Output: Fitur Dosen
-$dosen1->aksesFitur();
-?>
-```
-
 <h3> 4. Abstraction</h3>
 Untuk Menyembunyikan detail implementasi dan hanya menampilkan
 fungsi penting.
@@ -218,42 +193,4 @@ abstract class Pengguna {
     public function __construct($nama) {
         $this->nama = $nama;
     }
-
-    // Method untuk mendapatkan nilai atribut nama
-    public function getNama() {
-        return $this->nama;
-    }
-
-    // Method abstrak yang harus diimplementasikan oleh class turunan
-    abstract public function aksesFitur();
-}
-
-// Definisi class Dosen yang merupakan turunan dari class Pengguna
-class Dosen extends Pengguna {
-    // Implementasi method aksesFitur untuk menampilkan akses fitur dosen
-    public function aksesFitur() {
-        echo $this->getNama() . "Akses Fitur Dosen.<br>";
-    }
-}
-
-// Definisi class Mahasiswa yang merupakan turunan dari class Pengguna
-class Mahasiswa extends Pengguna {
-    // Implementasi method aksesFitur untuk menampilkan akses fitur mahasiswa
-    public function aksesFitur() {
-        echo $this->getNama() . "Akses Fitur Mahasiswa.<br>";
-    }
-}
-
-// Membuat objek Dosen dengan nama "Bapak Wahyu"
-$Dosen1 = new Dosen("Bapak Wahyu ");
-
-// Membuat objek Mahasiswa dengan nama "Noni"
-$Mahasiswa1 = new Mahasiswa("Noni ");
-
-// Memanggil method aksesFitur dari objek Dosen
-$Dosen1->aksesFitur(); // Output: Bapak Wahyu Akses Fitur Dosen.<br>
-
-// Memanggil method aksesFitur dari objek Mahasiswa
-$Mahasiswa1->aksesFitur(); // Output: Noni Akses Fitur Mahasiswa.<br>
-?>
 ```
