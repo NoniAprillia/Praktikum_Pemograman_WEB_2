@@ -50,28 +50,32 @@ Method atau metode di dalam kelas digunakan untuk melakukan operasi data dari ob
 
 <h2>Prinsip OOP</h2>
 
-1. Encapsulation: Menyembunyikan detail implementasi dan hanya memberikan
+<h3>1. Encapsulation</h3>
+
+untuk menyembunyikan detail implementasi dan hanya memberikan
 akses melalui metode tertentu.
 
-Contoh :
 ```php
 <?php
-// Definisi class Mahasiswa
+
 class Mahasiswa {
-    // Atribut atau properti dari class Mahasiswa (private untuk enkapsulasi)
     private $nama;
     private $nim;
     private $jurusan;
+```
+blaaablaaaaaaaaablaaaaaaa
 
-    // Constructor untuk menginisialisasi atribut saat objek dibuat
-    public function __construct($nama, $nim, $jurusan) {
+```php
+public function __construct($nama, $nim, $jurusan) {
         $this->nama = $nama;
         $this->nim = $nim;
         $this->jurusan = $jurusan;
-    }
+```
+bllslsssalaajdhdshbhbve
 
-    // Method getter untuk mendapatkan nama
-    public function getNama() { 
+- GETTER
+```php
+public function getNama() { 
         return $this->nama;
     }
 
@@ -84,7 +88,9 @@ class Mahasiswa {
     public function getJurusan() {
         return $this->jurusan;   
     }
-    
+```
+- SETTER
+```php    
     // Method setter untuk mengubah nama
     public function setNama($nama) {
         $this->nama = $nama;
@@ -100,79 +106,52 @@ class Mahasiswa {
         $this->jurusan = $jurusan;
     }
 }
-
-// Membuat objek Mahasiswa dengan data awal
-$Mahasiswa1 = new Mahasiswa("Noni Aprillia", "230102040", "Komputer dan Bisnis");
-
-// Menggunakan metode getter untuk menampilkan informasi mahasiswa
-echo "Nama: " . $Mahasiswa1->getNama() . '<br>';
-echo "NIM: " . $Mahasiswa1->getNim() . '<br>';
-echo "Jurusan: " . $Mahasiswa1->getJurusan() . '<br><br>';
-
-// Menggunakan metode setter untuk mengubah informasi mahasiswa
-$Mahasiswa1->setNama("Aprillia");
-$Mahasiswa1->setNim("230104020");
-$Mahasiswa1->setJurusan("KOMBIS");
-
-// Menampilkan informasi setelah perubahan menggunakan metode getter
-echo $Mahasiswa1->getNama() . '<br>';
-echo $Mahasiswa1->getNim() . '<br>';
-echo $Mahasiswa1->getJurusan() . '<br>';
-?>
 ```
+blalalalalbablalalabal 
 
-- Inheritance: Kelas dapat mewarisi properti dan metode dari kelas lain.
+<h3>OUTPUT ENCUPSULATION</h3>
+>>>>>>>>>>>>>>NANTI 
 
-Contoh:
+<h3>2. Inheritance</h3>
+Untuk Kelas dapat mewarisi properti dan metode dari kelas lain.
+
 ```php
 <?php
-// Definisi class Pengguna dengan atribut nama
 class Pengguna {
-    // Atribut nama yang bersifat protected (dapat diakses oleh class turunannya)
     protected $nama;
-
-    // Constructor untuk menginisialisasi atribut nama
     public function __construct($nama) {
         $this->nama = $nama;
     }
-
-    // Method getter untuk mendapatkan nama
     public function getNama() {
         return $this->nama;
     }
 }
+```
 
-// Definisi class Dosen yang merupakan turunan dari class Pengguna
+```php
 class Dosen extends Pengguna {
     // Atribut mataKuliah yang bersifat private
     private $mataKuliah;
-
-    // Constructor untuk menginisialisasi atribut nama dan mataKuliah
     public function __construct($nama, $mataKuliah) {
-        // Memanggil constructor dari class induk (Pengguna)
         parent::__construct($nama);
         $this->mataKuliah = $mataKuliah;
     }
-
-    // Method getter untuk mendapatkan mataKuliah
     public function getMatakuliah() {
         return $this->mataKuliah;
     }
 }
+```
 
-// Membuat objek Dosen dengan nama dan mataKuliah tertentu
-$Pengguna1 = new Dosen("Abda'u", "Pemrograman Web 2");
-
-// Menampilkan nama dan mataKuliah dari objek Dosen
+```php
 echo $Pengguna1->getNama() . '<br>';
 echo $Pengguna1->getMatakuliah() . '<br>'; // Output: Pemrograman Web 2
 ?>
 ```
 
-- Polymorphism: Metode yang sama dapat memiliki implementasi berbeda
+<h3> 3. Polymorphism </h3>
+Untuk Metode yang sama dapat memiliki implementasi berbeda
 dalam class yang berbeda.
 
-Contoh: 
 ```php
 <?php
 // Definisi class Pengguna
@@ -184,7 +163,9 @@ class Pengguna {
     public function setNama($nama) {
         $this->nama = $nama;
     }
+```
 
+```php
     // Method untuk mendapatkan nilai atribut nama
     public function getNama() {
         return $this->nama;
@@ -195,6 +176,7 @@ class Pengguna {
         return $this->nama;
     }
 }
+```
 
 // Definisi class Mahasiswa yang merupakan turunan dari class Pengguna
 class Mahasiswa extends Pengguna {
@@ -221,10 +203,10 @@ $dosen1->aksesFitur();
 ?>
 ```
 
-- Abstraction: Menyembunyikan detail implementasi dan hanya menampilkan
+<h3> 4. Abstraction</h3>
+Untuk Menyembunyikan detail implementasi dan hanya menampilkan
 fungsi penting.
 
-Contoh : 
 ```php
 <?php
 // Definisi class abstrak Pengguna
