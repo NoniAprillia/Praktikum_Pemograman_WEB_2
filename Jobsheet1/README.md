@@ -134,7 +134,8 @@ Setter adalah metode yang digunakan untuk mengubah atau menetapkan nilai atribut
 ```
 
 <h3>OUTPUT ENCUPSULATION</h3>
->>>
+
+![Screenshot (469)](https://github.com/user-attachments/assets/3fa0128c-98e8-42a5-b2fd-f18d63ac0cd2)
 
 <h3>2. Inheritance</h3>
 
@@ -177,6 +178,9 @@ echo $Pengguna1->getMatakuliah() . '<br>'; // Output: Pemrograman Web 2
 ?>
 ```
 getNama() adalah metode yang didefinisikan di kelas Pengguna. Karena $Pengguna1 adalah objek Dosen yang mewarisi dari Pengguna,
+
+<h3>OUTPUT INHERITANCE</h3>
+
 
 <h3> 3. Polymorphism </h3>
 
