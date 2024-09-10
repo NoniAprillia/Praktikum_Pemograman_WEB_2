@@ -106,3 +106,24 @@ $mahasiswa1->tampilkanData(): Memanggil metode tampilkanData pada objek $mahasis
 <h3>OUTPUT</h3>
 
 ![Screenshot (475)](https://github.com/user-attachments/assets/17b67509-5729-45f7-aa84-f5440a97e644)
+
+
+<h3>Membuat metode tambahan</h3>
+
+```php
+public
+```
+public: Modifikator akses ini menunjukkan bahwa metode updateJurusan dapat diakses dari luar kelas, dari objek yang dibuat dari kelas tersebut, dan dari kode lain yang menggunakan kelas ini. Tidak ada pembatasan akses pada metode ini.
+
+```php
+public function updateJurusan(){
+```
+function: Kata kunci untuk mendeklarasikan metode (atau fungsi) dalam PHP.
+updateJurusan: Nama metode. Nama ini digunakan untuk memanggil metode ini pada objek dari kelas.
+
+```php
+    return "<br> Nama: $this->nama </br> <br> NIM: $this->nim </br> <br> Jurusan: $this->jurusan </br>";
+```
+return: Kata kunci return digunakan untuk mengembalikan nilai
+```
+<h3>OUTPUT</h3>
