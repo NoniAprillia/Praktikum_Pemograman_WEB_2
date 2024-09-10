@@ -27,7 +27,7 @@ $Mahasiswa1 = new Mahasiswa;
     public $jurusan;
 ```
 
-Untuk variabel di dalam class untuk menyimpan data atau keadaan dari objek, aksesbilitasi ada 3 :  
+Untuk variabel di dalam class menyimpan data atau keadaan dari objek, aksesbilitasi ada 3 :  
 
 - Public: Dapat diakses dari mana saja.
 - Private: Hanya dapat diakses dalam kelas itu sendiri.
