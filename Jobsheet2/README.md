@@ -56,3 +56,5 @@ Atribut-atribut ini sebelumnya telah dideklarasikan dalam kelas Mahasiswa sebaga
 $Mahasiswa1->tampilkanData(): Memanggil metode tampilkanData pada objek $Mahasiswa1. Metode ini mengembalikan sebuah string yang memformat data atribut objek menjadi HTML.
 
 echo : Menampilkan hasil yang dikembalikan oleh metode tampilkanData ke output
+
+<h3>OUTPUT CLASS DAN OBJECT</h3>
