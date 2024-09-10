@@ -190,3 +190,41 @@ $mahasiswa1->tampilkanData(): Memanggil kembali metode tampilkanData pada objek 
 <h3>OUTPUT</h3>
 
 ![Screenshot (477)](https://github.com/user-attachments/assets/787a3f4c-a7b0-4ae3-8cab-158853318561)
+
+<h3>TUGAS</h3>
+
+- KELAS DOSEN
+
+```php
+class Dosen{
+    public $nama;
+    public $nip;
+    public $mataKuliah;
+```
+Class Dosen memiliki Atribut:
+$nama; — Menyimpan nama dosen.
+$nip; — Menyimpan NIP dosen.
+$mataKuliah; — Menyimpan mata kuliah yang diajar dosen.
+
+- Metode tampilkanDosen
+
+```php
+public function tampilkanDosen(){
+        return "Nama : $this->nama<br>
+               NIP : $this->nip<br>
+               Mata Kuliah : $this->mataKuliah<br>";
+```
+Mengembalikan  Nilai dari atribut Nama, Nim, dan Matakuliah
+
+- Instansiasi
+
+```php
+$Dosen1 = new Dosen();
+    $Dosen1->nama="Cahya Vika Sari <br>";
+    $Dosen1->nip="19830501201<br>";
+    $Dosen1->mataKuliah="Rekayasa Perangkat Lunak<br>";
+    echo $Dosen1->tampilkanDosen();
+```
+Membuat objek baru untuk menyimpan data nama Dosen, nip Dosen, dan Matakuliah yang dosen ajar
+
+<h3>OUTPUT</h3>
