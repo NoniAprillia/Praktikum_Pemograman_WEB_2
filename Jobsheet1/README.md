@@ -239,7 +239,8 @@ class Dosen extends Pengguna {
     }
 }
 ```
-extends digunakan untuk menunjukkan bahwa kelas Dosen adalah turunan dari kelas Pengguna. Ini berarti Dosen mewarisi atribut dan metode dari Pengguna.
+- extends digunakan untuk menunjukkan bahwa kelas Dosen adalah turunan dari kelas Pengguna. Ini berarti Dosen mewarisi atribut dan metode dari Pengguna.
 
 <h3>OUTPUT ABSTRACTION</h3>
 
+![Screenshot (472)](https://github.com/user-attachments/assets/c1c6c02d-b044-446c-b2a6-3c08cfba4091)
