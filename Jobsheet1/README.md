@@ -101,12 +101,10 @@ public function getNama() {
         return $this->nama;
     }
 
-    // Method getter untuk mendapatkan NIM
     public function getNim() {
         return $this->nim;
     }
 
-    // Method getter untuk mendapatkan jurusan
     public function getJurusan() {
         return $this->jurusan;   
     }
@@ -116,17 +114,13 @@ public function getNama() {
 Setter adalah metode yang digunakan untuk mengubah atau menetapkan nilai atribut dari luar kelas. Metode ini umumnya diberi nama dengan awalan set diikuti dengan nama atributnya.
 
 ```php    
-    // Method setter untuk mengubah nama
     public function setNama($nama) {
         $this->nama = $nama;
     }
 
-    // Method setter untuk mengubah NIM
     public function setNim($nim) {
         $this->nim = $nim;
     }
-
-    // Method setter untuk mengubah jurusan
     public function setJurusan($jurusan) {
         $this->jurusan = $jurusan;
     }
@@ -159,7 +153,6 @@ Protected : Artinya, atribut ini hanya bisa diakses di dalam kelas itu sendiri d
 
 ```php
 class Dosen extends Pengguna {
-    // Atribut mataKuliah yang bersifat private
     private $mataKuliah;
     public function __construct($nama, $mataKuliah) {
         parent::__construct($nama);
@@ -191,12 +184,9 @@ Manfaat: Mempermudah penggunaan objek dari berbagai kelas dengan cara yang konsi
 
 ```php
 <?php
-// Definisi class Pengguna
 class Pengguna {
-    // Atribut nama yang bersifat protected (dapat diakses oleh class turunannya)
     protected $nama;
 
-    // Method untuk mengatur nilai atribut nama
     public function setNama($nama) {
         $this->nama = $nama;
     }
@@ -207,15 +197,12 @@ class Pengguna {
 
 ```php
     class Mahasiswa extends Pengguna {
-    // Override method aksesFitur untuk menampilkan "Fitur Mahasiswa"
     public function aksesFitur() {
         echo "Fitur Mahasiswa";
     }
 }
 
-// Definisi class Dosen yang merupakan turunan dari class Pengguna
 class Dosen extends Pengguna {
-    // Override method aksesFitur untuk menampilkan "Fitur Dosen"
     public function aksesFitur() {
         echo "Fitur Dosen";
     }
@@ -226,6 +213,7 @@ class Dosen extends Pengguna {
 
 <h3>OUTPUT POLYMORPHISM</h3>
 
+![Screenshot (471)](https://github.com/user-attachments/assets/597ba6f0-defb-46eb-b67c-bbf4e4f693e4)
 
 <h3> 4. Abstraction</h3>
 
@@ -235,13 +223,23 @@ Manfaat: Memudahkan pengembangan dan pemeliharaan kode dengan menyediakan pandan
 
 ```php
 <?php
-// Definisi class abstrak Pengguna
 abstract class Pengguna {
-    // Atribut nama yang bersifat protected (dapat diakses oleh class turunannya)
     protected $nama;
-
-    // Constructor untuk menginisialisasi atribut nama
     public function __construct($nama) {
         $this->nama = $nama;
     }
 ```
+- Kata kunci abstract mendefinisikan Pengguna sebagai kelas abstrak. Kelas abstrak adalah kelas yang tidak dapat diinstansiasi secara langsung. Artinya, kamu tidak dapat membuat objek langsung dari kelas ini.
+- Tujuan dari kelas abstrak adalah untuk menyediakan blueprint (kerangka) untuk kelas turunan yang akan mewarisinya. Kelas turunan harus mengimplementasikan metode abstrak yang didefinisikan dalam kelas abstrak.
+
+```php
+class Dosen extends Pengguna {
+    public function aksesFitur() {
+        echo $this->getNama() . "Akses Fitur Dosen.<br>";
+    }
+}
+```
+extends digunakan untuk menunjukkan bahwa kelas Dosen adalah turunan dari kelas Pengguna. Ini berarti Dosen mewarisi atribut dan metode dari Pengguna.
+
+<h3>OUTPUT ABSTRACTION</h3>
+
