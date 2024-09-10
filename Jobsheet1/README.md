@@ -5,10 +5,10 @@ Pemrograman Berorientasi Objek atau yang biasa disebut dengan OOP adalah suatu m
 Program-program yang telah ada merupakan gabungan dari beberapa komponen-komponen kecil yang sudah ada sebelumnya.
 
 Pemrograman berorientasi objek memiliki beberapa keunggulan dibandingkan pemrograman prosedural:
-- OOP lebih cepat dan mudah dijalankan
-- OOP menyediakan struktur yang jelas untuk program
-- OOP membantu menjaga kode PHP tetap DRY "Jangan Ulangi Diri Anda Sendiri", dan membuat kode lebih mudah untuk dipelihara, dimodifikasi, dan di-debug
-- OOP memungkinkan pembuatan aplikasi yang dapat digunakan kembali sepenuhnya dengan kode yang lebih sedikit dan waktu pengembangan yang lebih singkat
+- Membantu melindungi data
+- Mengurangi duplikasi kode
+- Menyederhanakan kode
+- memudahkan pemahaman dan penggunaan kode
 
 Tujuan utama OOP adalah untuk mengatasi kelemahan pendekatan pemrograman konvensional.
 
