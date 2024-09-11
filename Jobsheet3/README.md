@@ -387,3 +387,27 @@ $mahasiswa = new Mahasiswa("Noni Aprillia", "230102040");
 $dosen: Merupakan objek dari kelas Dosen, yang memiliki nama "Bapak Lutfhi Syafirullah" dan NIDN "0621118402".
 
 $mahasiswa: Merupakan objek dari kelas Mahasiswa, yang memiliki nama "Noni Aprillia" dan ID mahasiswa "230102040".
+
+```php
+echo "Data Dosen:<br>";
+echo "Nama: " . $dosen->getName() . "<br>";
+echo "NIDN: " . $dosen->getNidn() . "<br>";
+echo "Role: " . $dosen->getRole() . "<br><br>";
+
+echo "Data Mahasiswa:<br>";
+echo "Nama: " . $mahasiswa->getName() . "<br>";
+echo "NIM: " . $mahasiswa->getNim() . "<br>";
+echo "Role: " . $mahasiswa->getRole() . "<br><br>"
+```
+Menampilkan output nya 
+
+```php
+$jurnalDosen = new JurnalDosen();
+$jurnalMahasiswa = new JurnalMahasiswa();
+
+echo $jurnalDosen->manageSubmission() . "<br>";
+echo $jurnalMahasiswa->manageSubmission() . "<br>";
+```
+Menggunakan atau memanggil kelas Jurnal 
+
+<h3>OUTPUT</h3>
