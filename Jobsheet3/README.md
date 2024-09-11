@@ -204,3 +204,6 @@ $student->setStudentID("230302010");
 echo $student->getName() . " has Student ID " . $student->getStudentID();
 ```
 Membuat objek Student baru dengan nama "Noni Aprillia" dan ID mahasiswa "230102040". Ini memanggil konstruktor Student, yang pada gilirannya memanggil konstruktor dari kelas induk Person untuk mengatur nama dan menginisialisasi ID mahasiswa di kelas Student.
+
+<h3>OUTPUT</h3>
+
