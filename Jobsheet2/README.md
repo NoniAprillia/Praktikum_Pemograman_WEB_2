@@ -17,6 +17,8 @@ public $nama;
 ```
 Atribut adalah elemen penting yang digunakan untuk menyimpan data dalam sebuah objek. Atribut sering kali disebut juga sebagai properti atau variabel anggota. Mereka mendefinisikan keadaan atau informasi yang dimiliki oleh objek.
 
+Didalam class mahasiswa terdapat tiga atribut yaitu nama, nim, dan juga jurusan
+
 ```php
 class Mahasiswa {
 public $nama;
@@ -39,7 +41,7 @@ Metode tampilkanData() bertujuan untuk mengembalikan informasi yang diformat ten
 //INSTANSIASI OBJEK
     $Mahasiswa1 = new Mahasiswa();
 ```
-$Mahasiswa1 : Ini adalah variabel yang menyimpan referensi ke objek yang baru dibuat dari kelas Mahasiswa.
+$Mahasiswa1 : variabel yang menyimpan referensi ke objek yang baru dibuat dari kelas Mahasiswa.
 
 new Mahasiswa(): Kata kunci new digunakan untuk membuat objek baru dari kelas Mahasiswa. Proses ini disebut instansiasi. Dengan perintah ini, PHP memanggil konstruktor kelas Mahasiswa (jika ada) dan mengalokasikan memori untuk objek baru tersebut.
 
