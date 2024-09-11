@@ -324,3 +324,28 @@ public function setName($name) {
 ````
 Setter yang digunakan untuk mengatur atau memodifikasi nilai atribut
 
+```php
+abstract public function getRole();
+```
+getrole digunakan untuk mengembalikan peran atau jenis spesifik dari objek.
+
+<h3>Buat kelas Student yang mewarisi dari Person dan tambahkan atribut studentID
+serta metode getStudentID()</h3>
+
+- SUB CLASS
+```php
+class Dosen extends Person {
+    // Atribut
+    private $nidn;
+```
+- class Dosen extends Person: Kelas Dosen adalah subclass dari kelas Person. Ini berarti Dosen mewarisi semua atribut dan metode dari kelas Person. Kelas Dosen dapat menggunakan metode dan atribut yang ada di kelas Person dan juga dapat menambahkan fitur tambahan yang spesifik untuk dosen.
+- private $nidn: Ini adalah atribut baru yang ditambahkan khusus untuk kelas Dosen. Atribut ini menyimpan nomor identifikasi dosen (NIDN) dan bersifat private, sehingga hanya dapat diakses dari dalam kelas Dosen
+
+```php
+    public function __construct($name, $nidn) {
+      parent::__construct($name);
+        $this->nidn = $nidn;
+    }
+```
+- parent::__construct($name): Memanggil konstruktor kelas induk Person untuk menginisialisasi atribut name
+- $this->nidn = $nidn: Menginisialisasi atribut nidn dengan nilai yang diberikan saat objek Dosen dibuat.
