@@ -204,10 +204,3 @@ $student->setStudentID("230302010");
 echo $student->getName() . " has Student ID " . $student->getStudentID();
 ```
 Membuat objek Student baru dengan nama "Noni Aprillia" dan ID mahasiswa "230102040". Ini memanggil konstruktor Student, yang pada gilirannya memanggil konstruktor dari kelas induk Person untuk mengatur nama dan menginisialisasi ID mahasiswa di kelas Student.
-
-echo $student->getName() . " has Student ID " . $student->getStudentID() . "<br>";: Menampilkan nama dan ID mahasiswa dari objek $student menggunakan metode getter getName() dan getStudentID(). Pada titik ini, nama adalah "Noni Aprillia" dan ID mahasiswa adalah "230102040".
-
-$student->setName("Katrina Dewi");: Mengubah nama mahasiswa menjadi "Katrina Dewi" menggunakan metode setter setName().
-$student->setStudentID("230302010");: Mengubah ID mahasiswa menjadi "230302010" menggunakan metode setter setStudentID().
-
-echo $student->getName() . " has Student ID " . $student->getStudentID();: Menampilkan nama dan ID mahasiswa setelah diubah. Nama sekarang adalah "Katrina Dewi" dan ID mahasiswa adalah "230302010".
