@@ -411,3 +411,5 @@ echo $jurnalMahasiswa->manageSubmission() . "<br>";
 Menggunakan atau memanggil kelas Jurnal 
 
 <h3>OUTPUT</h3>
+
+![Screenshot (486)](https://github.com/user-attachments/assets/7bc78481-47fd-4d49-b66d-602ff8e62d37)
