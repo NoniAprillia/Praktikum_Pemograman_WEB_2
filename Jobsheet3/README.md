@@ -298,7 +298,7 @@ abstract class Person {
 ```php
 private $name;
 ```
-Menandakan bahwa atribut atau metode hanya dapat diakses dari dalam kelas tempat atribut atau metode tersebut dideklarasikan.
+private person memiliki atribut nama Menandakan bahwa atribut atau metode hanya dapat diakses dari dalam kelas tempat atribut atau metode tersebut dideklarasikan.
 ( private $name; )
 private: Menetapkan visibilitas atribut.
 $name: Nama atribut.
@@ -310,3 +310,17 @@ $this->name = $name;
 ```
 function __construct($name): Ini adalah deklarasi metode konstruktor dengan nama __construct
 $name: Parameter ini adalah variabel yang diterima oleh konstruktor saat objek dibuat
+
+- METODE
+```php
+public function getName() {
+    }
+```
+getter yang digunakan untuk mendapatkan nilai dari atribut
+
+```php
+public function setName($name) {
+    }
+````
+Setter yang digunakan untuk mengatur atau memodifikasi nilai atribut
+
