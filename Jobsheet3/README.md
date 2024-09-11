@@ -3,18 +3,14 @@
 <h2>Menerapkan Konsep Inheritance, Polymorphism, Encapsulation,dan Abstraction dalam PHP</h2>
 
 ## INHERITANCE
+Inheritance yaitu pewarisan atau turunan properti dari kelas lain, pada inheritance biasanya miliki induk dan anak induk 
 
 - CLASS
 ```php
 class Person {
-```
-Kelas Person digunakan untuk membuat objek yang mewakili seseorang dengan informasi dasar 
-
-- ATRIBUT
-```php
 protected $name;
 ```
-protected adalah salah satu dari tiga visibilitas akses untuk atribut dan metode dalam kelas, bersama dengan public dan private. Ketika Anda mendeklarasikan atribut atau metode dengan kata kunci protected, itu mempengaruhi cara akses ke atribut atau metode tersebut oleh kelas dan objek lainnya.
+Membuat kelas person yang memiliki atribut nama dengan aksesbiliti protected yang bisa di implementasikan oleh turunan nya 
 
 - CONSTRUCT
 ```php
@@ -25,19 +21,14 @@ konstruktor public dapat digunakan untuk menginisialisasi objek dari luar kelas.
 
 - METODE
 ```php
-public
-```
-public tidak memiliki batasan akses, sehingga pengguna atau bagian lain dari aplikasi dapat memanggil metode ini untuk mendapatkan informasi
-
-```php
 public function getName(){
 ```
-metode yang dimulai dengan get sering digunakan untuk mengakses atau mengambil nilai dari atribut yang bersifat privat atau protected
+metode yang dimulai dengan get sering digunakan untuk mengambil nilai dari atribut 
 
 ```php
 return $this->name;
 ```
-return: Keyword return mengembalikan nilai dari metode. Dalam hal ini, nilai yang dikembalikan adalah nilai dari atribut name.
+return untuk mengembalikan nilai dari metode. Dalam hal ini, nilai yang dikembalikan adalah nilai dari atribut name.
 
 $this->name: Mengacu pada atribut name dari objek saat ini. Atribut ini menyimpan nilai yang diinginkan oleh metode getName()
 
@@ -45,7 +36,7 @@ $this->name: Mengacu pada atribut name dari objek saat ini. Atribut ini menyimpa
 ```php
 class Student extends Person {
 ```
-Student adalah subclass dari Person. Ini berarti bahwa kelas Student akan mewarisi semua atribut dan metode yang didefinisikan dalam kelas Person
+Student adalah subclass dari Person. Ini berarti kelas Student akan mewarisi semua atribut dan metode yang didefinisikan dalam kelas Person
 
 ```php
 private $studentID;
@@ -60,7 +51,7 @@ konstruktor kelas Student yang memanggil konstruktor dari kelas induk dan kemudi
 ```php
 parent::__construct($name);
 ```
-memastikan bahwa atribut yang diwarisi (dalam hal ini, name) diinisialisasi dengan benar.
+memastikan atribut diinisialisasi dengan benar.
 
 ```php
 $this->studentID=$studentID;
@@ -69,31 +60,28 @@ $studentID mengatur nilai untuk atribut studentID dalam kelas Student.
 
 ```php
 $Person1 = new Student ("Noni Aprillia", " 230102040 " );
-```
-memanggil konstruktor __construct dari kelas Student. Konstruktor ini menginisialisasi atribut name dan studentID dengan nilai 
-
-```php
 echo $Person1->getName() . '<br>';
 ```
-getName() adalah metode publik di kelas Person yang mengembalikan nilai dari atribut name. Metode ini diakses dari objek $Person1.
+getName() adalah metode publik di kelas Person yang mengembalikan nilai dari atribut name. 
 
 ```php
 echo $Person1->getstudentID() . '<br>';
 ```
-mencetak nilai dari atribut studentID, yaitu "230102040"
+menampilkan nilai dari atribut studentID, yaitu "230102040"
 
 <h3>OUTPUT</h3>
 
 ![Screenshot (482)](https://github.com/user-attachments/assets/883aedf4-fdeb-4ffa-a166-8261fa99de95)
 
 ## POLYMORPHISM
+Polymorphism itu metode metode nya sama tapi tidak dengan implementasian nya karena pada polymorphism implementasi nya akan berbeda dengan metode yang digunakan 
 
 - CLASS
 
 ```php
 class Person {
 ```
-Definisi kelas Person. Kelas adalah cetak biru untuk objek, yang menentukan atribut (variabel) dan metode (fungsi) yang akan dimiliki oleh objek yang dibuat dari kelas ini.
+Kelas adalah cetak biru untuk objek, yang menentukan atribut (variabel) dan metode (fungsi) yang akan dimiliki oleh objek
 
 ```php
     public $name; 
@@ -104,7 +92,7 @@ public menunjukkan bahwa atribut $name dapat diakses dari mana saja, baik dari d
 ```php
 $this->name = $name;
 ```
-Baris ini menginisialisasi atribut $name dengan nilai yang diterima dari parameter $name. $this merujuk pada objek saat ini yang sedang diinisialisasi.
+atribut $name dengan nilai yang diterima dari parameter $name. $this merujuk pada objek saat ini yang sedang di kerjakan saat ini
 
 - METODE
 
@@ -112,7 +100,7 @@ Baris ini menginisialisasi atribut $name dengan nilai yang diterima dari paramet
 public function getName() {
         return $this->name;
 ```
-getName biasanya digunakan untuk mengakses atau mengambil nilai dari atribut yang mungkin bersifat privat atau protected.
+getName biasanya digunakan untuk mengakses dan juga mengambil nilai dari atribut yang mungkin bersifat privat atau protected.
 
 ```php
 public function setName($name) {
@@ -122,7 +110,7 @@ setName adalah nama metode ini. Dalam konvensi OOP, metode yang diawali dengan s
 ```php
 $this->name = $name;
 ```
-Baris ini menetapkan nilai parameter $name ke atribut name dari objek. Dengan kata lain, ini mengubah nilai atribut name sesuai dengan nilai yang diterima dari parameter.
+menetapkan nilai parameter $name ke atribut name dari objek
 
 - SUB CLASS
 
@@ -159,8 +147,10 @@ Menampilkan object
 ![Screenshot (483)](https://github.com/user-attachments/assets/04b17255-4e55-4a53-b542-358d67bc75cf)
  
 ## ENCUPSULATION
+Menyembunyikan detail dan hanya dapat di akses oleh metode tertentu saja, encupsulation biasanya menggunakan aksesbiliti private untuk menjaga ke amanan dan privasi dari kelas nya
 
 - CLASS
+
 ```php
 class  Person {
 ```
@@ -210,21 +200,19 @@ Membuat objek Student baru dengan nama "Noni Aprillia" dan ID mahasiswa "2301020
 ![Screenshot (484)](https://github.com/user-attachments/assets/501239fb-2397-4aff-850a-52753c0a13ee)
 
 <h3>ABSTRACTION</h3>
+Detail nya juga tersembunyi tetapi abstract menampilkan fungsi penting saja, Abstract memiliki metode yang akan di turun kan ke pewaris atau anak class nya lalu setelah itu anak kelas nya melakukan modifikasi sesuai dengan apa yang di butuhkan 
 
 - CLASS
 ```php
 abstract class Course {
-```
-abstract: Kata kunci ini mendefinisikan bahwa Course adalah kelas abstrak dan tidak bisa dibuat objeknya secara langsung
-
-```php
 abstract public function getCourseDetails();
 ```
-nama metode yang akan digunakan dalam kelas turunan. Metode ini dirancang untuk mengambil dan mengembalikan informasi terkait kursus.
+abstract class Course: Ini mendeklarasikan kelas Course sebagai kelas abstrak. Kelas abstrak adalah kelas yang tidak dapat diinstansiasi secara langsung; yaitu, Anda tidak dapat membuat objek dari kelas ini secara langsung. Kelas ini biasanya berisi metode-metode yang harus diimplementasikan oleh kelas-kelas yang mewarisinya.
 
-deklarasi metode abstrak yang harus diimplementasikan oleh setiap subclass dari kelas abstrak.
+abstract public function getCourseDetails();: Ini mendeklarasikan metode abstrak getCourseDetails. Metode ini tidak memiliki implementasi di dalam kelas Course, dan setiap kelas yang mewarisi Course harus menyediakan implementasi konkret untuk metode ini.
 
 - SUB CLASS ONLINE COURSE
+subkelas adalah jenis khusus dari kelas yang lebih umum. Subkelas mewarisi sifat dari kelas induknya, tetapi juga bisa menambahkan sifat-sifat atau perilaku khusus yang membedakannya.
 
 ```php
 class OnlineCourse extends Course {
@@ -237,7 +225,7 @@ extends menunjukkan bahwa kelas OnlineCourse adalah subclass dari kelas Course. 
     private $duration;
     private $platform;
 ```
-Atribut - atribut Untuk menyimpan data yang ada pada object
+pada class onlinecourse memiliki atribut title, durasi, dan platform yang di gunakan 
 
 - SUB CLASS OFFLINE COURSE
 
