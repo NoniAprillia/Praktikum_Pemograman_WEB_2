@@ -160,3 +160,38 @@ Menampilkan object
  
 ## ENCUPSULATION
 
+- CLASS
+```php
+class  Person {
+```
+Definisi kelas Person. Kelas adalah cetak biru untuk objek, yang menentukan atribut (variabel) dan metode (fungsi) yang akan dimiliki oleh objek yang dibuat dari kelas ini.
+
+- ATRIBUT
+```php
+protected $name;
+```
+protected adalah salah satu tingkat aksesibilitas dalam OOP. Atribut atau metode yang dideklarasikan sebagai protected dapat diakses:
+Dari dalam kelas itu sendiri.
+Dari kelas turunan (subclass) yang mewarisi kelas tersebut.
+
+- METODE
+
+```php
+public function getName() {
+```
+metode publik yang mengembalikan nilai dari atribut name yang ada pada objek.
+
+```php
+    return $this->name;
+```
+mengakses nilai atribut name dan mengembalikannya kepada kode pemanggil.
+
+```php
+public function setName($name) {
+```
+Ini adalah deklarasi metode bernama setName yang menerima satu parameter $name
+
+```php
+$this->name = $name;
+```
+Mengacu pada atribut name dari objek saat ini. Atribut ini menyimpan nilai yang akan diatur atau diubah oleh metode setter.
