@@ -29,3 +29,17 @@ Atau disebut juga properties adalah variabel yang menyimpan data untuk objek.
 Untuk menginisialisasikan atribut
 - METODE
 fungsi untuk mengoperasikan data dan yang ditentukan dalam kelas untuk dipanggil oleh objek.
+
+## Aksesbilitasi 
+- Public: Dapat diakses dari mana saja.
+- Private: Hanya dapat diakses dalam kelas itu sendiri.
+- Protected: Dapat diakses oleh kelas itu sendiri dan kelas turunan.
+
+## Prinsip OOP
+- Encapsulation: Menyembunyikan detail implementasi dan hanya memberikan
+akses melalui metode tertentu.
+- Inheritance: Kelas dapat mewarisi properti dan metode dari kelas lain.
+- Polymorphism: Metode yang sama dapat memiliki implementasi berbeda
+dalam class yang berbeda.
+- Abstraction: Menyembunyikan detail implementasi dan hanya menampilkan
+fungsi penting.
