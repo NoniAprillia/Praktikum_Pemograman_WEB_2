@@ -285,7 +285,7 @@ Memanggil metode getCourseDetails() pada objek $offlineCourse untuk mendapatkan 
 ![Screenshot (485)](https://github.com/user-attachments/assets/4cc9c74b-1991-407b-a73f-83508dbf17f2)
 
 ## TUGAS 
-<h3>Buat kelas Person dengan atribut name dan metode getName()</h3>
+<h3>Buat proyek PHP dengan studi kasus</h3>
 
 - CLASS
 ```php
@@ -329,10 +329,8 @@ abstract public function getRole();
 ```
 getrole digunakan untuk mengembalikan peran atau jenis spesifik dari objek.
 
-<h3>Buat kelas Student yang mewarisi dari Person dan tambahkan atribut studentID
-serta metode getStudentID()</h3>
 
-- SUB CLASS
+- SUB CLASS DOSEN
 ```php
 class Dosen extends Person {
     // Atribut
@@ -349,3 +347,43 @@ class Dosen extends Person {
 ```
 - parent::__construct($name): Memanggil konstruktor kelas induk Person untuk menginisialisasi atribut name
 - $this->nidn = $nidn: Menginisialisasi atribut nidn dengan nilai yang diberikan saat objek Dosen dibuat.
+
+- SUB CLASS MAHASISWA
+
+```php
+class Mahasiswa extends Person {
+    // Atribut
+    private $nim;
+```
+Sub class Mahasiswa mempunyai atribut nim dengan aksesbiliti private yang hanya dapat di akses oleh metode tertentu
+
+```php
+public function getRole() {
+        return "Mahasiswa";
+```
+getRole sebagai metode untuk mengidentifikasi jabatan 
+
+- SUB CLASS JURNAL
+
+```php
+class JurnalDosen extends Jurnal {
+    public function manageSubmission() {
+        return "Jurnal Dosen untuk saat ini sedang diproses.";
+    }
+```
+
+```php
+class JurnalMahasiswa extends Jurnal {
+    public function manageSubmission() {
+        return "Jurnal Mahasiswa untuk saat ini sedang diproses.";
+    }
+```
+public function manageSubmission(): Metode ini adalah metode publik dalam kelas JurnalDosen. Karena dideklarasikan dengan visibilitas public, metode ini dapat diakses dari luar kelas JurnalDosen, termasuk dari instansi objek JurnalDosen atau kode lain yang menggunakan objek
+
+```php
+$dosen = new Dosen("Bapak Lutfhi Syafirullah", "0621118402");
+$mahasiswa = new Mahasiswa("Noni Aprillia", "230102040");
+```
+$dosen: Merupakan objek dari kelas Dosen, yang memiliki nama "Bapak Lutfhi Syafirullah" dan NIDN "0621118402".
+
+$mahasiswa: Merupakan objek dari kelas Mahasiswa, yang memiliki nama "Noni Aprillia" dan ID mahasiswa "230102040".
