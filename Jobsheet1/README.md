@@ -1,45 +1,39 @@
 ## JOBSHEET - 1
 
 <h2>Mendefinisikan Kelas dan Objek</h2>
-<b>Kelas(Class)</b>
 
+<b>Kelas(Class)</b>
 ```php
 class Mahasiswa
 ```
-
-- Template untuk menciptakan objek yang mencangkup atribut dan juga metode yang dimiliki oleh objek
-- Membuat definisi class yang akan menampung atribut dan juga metode
+Class dapat didefinisikan seperti template untuk menciptakan objek yang mencangkup atribut dan juga metode yang dimiliki oleh objek atau seolah olah class itu adalah bahan mentah yang akan kita olah menjadi suatu object
 
 <b>Objek(Object)</b>
-
 ```php
 $Mahasiswa1 = new Mahasiswa;
 ```
-
-- Instance dari class yang memiliki atribut (properties) dan perilaku(methods)
-- Instansiasi menciptakan class baru untuk menyimpan data 
+Instansiasi dari class yang memiliki atribut (properties) dan perilaku(methods), Instansiasi menciptakan class baru untuk menyimpan data atau perumpaan yang kita bayangkan seperti object ini bahan yang sudah jadi dari kelas  
 
 <b>Atribut</b>
-
 ```php
     public $nama;
     public $nim;
     public $jurusan;
 ```
-
-Untuk variabel di dalam class menyimpan data atau keadaan dari objek, aksesbilitasi ada 3 :  
+variabel di dalam class yang menyimpan data atau keadaan dari objek, di dalam atribut memiliki aksesbilitasi :  
 
 - Public: Dapat diakses dari mana saja.
 - Private: Hanya dapat diakses dalam kelas itu sendiri.
 - Protected: Dapat diakses oleh kelas itu sendiri dan kelas turunan.
 
+dari ketiga ini bisa di sesuaikan sesuai dengan kebutuhan dan kondisi nya masing-masing
+
 <b>Method</br>
 ```php
-    public function tampilkanData() {
-        return " <br> Nama : $this->nama </br> <br> NIM : $this->nim </br> <br> Jurusan : $this->jurusan.</br>";
+public function tampilkanData() {
+return " <br> Nama : $this->nama </br> <br> NIM : $this->nim </br> <br> Jurusan : $this->jurusan.</br>";
 ```
-
-- Method atau metode di dalam kelas digunakan untuk melakukan operasi data dari objek
+Method atau metode di dalam kelas digunakan untuk melakukan operasi data dari objek
 
 <h2>Prinsip OOP</h2>
 
@@ -60,7 +54,7 @@ class Mahasiswa {
 ```
 Kelas Mahasiswa: Ini adalah definisi dari sebuah kelas yang bernama Mahasiswa. Kelas adalah blueprint atau template untuk membuat objek.
 
-Atribut Privat:
+Dalam Class Mahasiswa memiliki Atribut Privat:
 
 - private $nama;: Variabel untuk menyimpan nama mahasiswa. Kata kunci private berarti atribut ini hanya bisa diakses dari dalam kelas Mahasiswa, tidak dapat diakses langsung dari luar kelas.
 - private $nim;: Variabel untuk menyimpan Nomor Induk Mahasiswa (NIM). Sama seperti nama, akses ke nim dibatasi hanya untuk metode di dalam kelas.
@@ -74,10 +68,10 @@ public function __construct($nama, $nim, $jurusan) {
 ```
 $this->nama = $nama;:
 
-$this: Merujuk pada instance saat ini dari kelas Mahasiswa.
+$this: Merujuk pada instansiasi saat ini dari kelas Mahasiswa.
 $this->nama: Mengacu pada atribut nama dalam kelas.
 
-Metode dalam OOP ada 2, yaitu : 
+Metode dalam OOP : 
 
 - GETTER
 
@@ -119,7 +113,7 @@ Setter adalah metode yang digunakan untuk mengubah atau menetapkan nilai atribut
 
 <h3>2. Inheritance</h3>
 
-Definisi : Pewarisan adalah mekanisme di mana sebuah kelas baru (subkelas atau kelas turunan) dapat mewarisi atribut dan metode dari kelas yang sudah ada (superkelas atau kelas dasar). Ini memungkinkan penggunaan kembali kode yang sudah ada dan memperluas fungsionalitas tanpa harus menulis ulang kode.
+Definisi : Pewarisan adalah mekanisme di mana sebuah kelas baru (subkelas atau kelas turunan) dapat mewarisi atribut dan metode dari kelas yang sudah ada 
 
 Manfaat : Memudahkan pengorganisasian kode dan memungkinkan pengembangan yang lebih efisien dengan mendefinisikan kelas yang lebih umum dan kelas yang lebih spesifik.
 
@@ -135,7 +129,7 @@ class Pengguna {
     }
 }
 ```
-Protected : Artinya, atribut ini hanya bisa diakses di dalam kelas itu sendiri dan kelas-kelas yang mewarisi kelas ini (subkelas), tetapi tidak bisa diakses dari luar kelas secara langsung.
+Protected adalah atribut yang hanya bisa diakses di dalam kelas itu sendiri dan kelas-kelas yang mewarisi kelas ini (subkelas), tetapi tidak bisa diakses dari luar kelas secara langsung.
 
 ```php
 class Dosen extends Pengguna {
@@ -149,7 +143,7 @@ class Dosen extends Pengguna {
     }
 }
 ```
-extends adalah kata kunci yang digunakan untuk mendefinisikan pewarisan kelas
+extends adalah kata kunci yang digunakan untuk mendefinisikan pewarisan kelas, extends seperti memanggil induk atau ibu nya
 
 ```php
 echo $Pengguna1->getNama() . '<br>';
