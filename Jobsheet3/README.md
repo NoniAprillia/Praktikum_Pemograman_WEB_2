@@ -283,3 +283,30 @@ Memanggil metode getCourseDetails() pada objek $offlineCourse untuk mendapatkan 
 <h3>OUTPUT</h3>
 
 ![Screenshot (485)](https://github.com/user-attachments/assets/4cc9c74b-1991-407b-a73f-83508dbf17f2)
+
+## TUGAS 
+<h3>Buat kelas Person dengan atribut name dan metode getName()</h3>
+
+- CLASS
+```php
+abstract class Person {
+```
+- abstract: Kata kunci abstract menunjukkan bahwa Person adalah kelas abstrak. Kelas ini tidak dapat dibuat menjadi objek secara langsung.
+- class Person: Mendefinisikan kelas bernama Person.
+
+- ATRIBUT
+```php
+private $name;
+```
+Menandakan bahwa atribut atau metode hanya dapat diakses dari dalam kelas tempat atribut atau metode tersebut dideklarasikan.
+( private $name; )
+private: Menetapkan visibilitas atribut.
+$name: Nama atribut.
+
+- CONSTRUCT 
+```php
+public function __construct($name) {
+$this->name = $name;
+```
+function __construct($name): Ini adalah deklarasi metode konstruktor dengan nama __construct
+$name: Parameter ini adalah variabel yang diterima oleh konstruktor saat objek dibuat
