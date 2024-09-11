@@ -7,7 +7,7 @@ Nim : 230102040
 # OOP ( Object-Oriented Programming )
 
 ## Pendahuluan
-suatu metode pemrograman yang berorientasi pada objek. 
+OOP adalah suatu metode pemrograman yang berorientasi pada objek. 
 Program-program yang telah ada merupakan gabungan dari beberapa komponen-komponen kecil yang sudah ada sebelumnya.
 
 Pemrograman berorientasi objek memiliki beberapa keunggulan dibandingkan pemrograman prosedural:
