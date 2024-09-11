@@ -281,3 +281,5 @@ echo $offlineCourse->getCourseDetails();
 Memanggil metode getCourseDetails() pada objek $offlineCourse untuk mendapatkan detail kursus. Metode ini mengembalikan string yang berisi informasi tentang kursus offline: nama, durasi, dan lokasi.
 
 <h3>OUTPUT</h3>
+
+![Screenshot (485)](https://github.com/user-attachments/assets/4cc9c74b-1991-407b-a73f-83508dbf17f2)
