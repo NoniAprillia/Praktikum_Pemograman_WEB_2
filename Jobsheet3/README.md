@@ -208,3 +208,76 @@ Membuat objek Student baru dengan nama "Noni Aprillia" dan ID mahasiswa "2301020
 <h3>OUTPUT</h3>
 
 ![Screenshot (484)](https://github.com/user-attachments/assets/501239fb-2397-4aff-850a-52753c0a13ee)
+
+<h3>ABSTRACTION</h3>
+
+- CLASS
+```php
+abstract class Course {
+```
+abstract: Kata kunci ini mendefinisikan bahwa Course adalah kelas abstrak dan tidak bisa dibuat objeknya secara langsung
+
+```php
+abstract public function getCourseDetails();
+```
+nama metode yang akan digunakan dalam kelas turunan. Metode ini dirancang untuk mengambil dan mengembalikan informasi terkait kursus.
+
+deklarasi metode abstrak yang harus diimplementasikan oleh setiap subclass dari kelas abstrak.
+
+- SUB CLASS ONLINE COURSE
+
+```php
+class OnlineCourse extends Course {
+```
+deklarasi kelas baru bernama OnlineCourse.
+extends menunjukkan bahwa kelas OnlineCourse adalah subclass dari kelas Course. Artinya, OnlineCourse mewarisi atribut dan metode dari kelas Course, termasuk metode abstrak yang harus diimplementasikan.
+
+```php
+    private $title;
+    private $duration;
+    private $platform;
+```
+Atribut - atribut Untuk menyimpan data yang ada pada object
+
+- SUB CLASS OFFLINE COURSE
+
+```php
+class OfflineCourse extends Course {
+```
+deklarasi kelas baru bernama OfflineCourse.
+
+- Atribut 
+```php
+    private $title;
+    private $duration;
+    private $location;
+```
+
+- METODE
+```php
+  public function getCourseDetails() {
+        return "Offline Course: {$this->title}, Duration: {$this->duration}, Location: {$this->location}";
+```
+deklarasi metode dengan nama getCourseDetails. Metode ini tidak menerima parameter.
+
+```php
+$onlineCourse = new OnlineCourse("Teori Rekayara Perangkat Lunak", "1 weeks", "Zoom");
+```
+Membuat objek baru dari kelas OnlineCourse.
+
+```php
+echo $onlineCourse->getCourseDetails() . "<br>";
+```
+memanggil metode getCourseDetails() pada objek $onlineCourse untuk mendapatkan detail kursus.
+
+```php
+$offlineCourse = new OfflineCourse("Praktikum RPL", "5 days", "Cilacap");
+```
+Membuat objek baru dari kelas OfflineCourse.
+
+```php
+echo $offlineCourse->getCourseDetails();
+```
+Memanggil metode getCourseDetails() pada objek $offlineCourse untuk mendapatkan detail kursus. Metode ini mengembalikan string yang berisi informasi tentang kursus offline: nama, durasi, dan lokasi.
+
+<h3>OUTPUT</h3>
