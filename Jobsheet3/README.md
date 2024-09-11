@@ -155,3 +155,8 @@ echo $student->getName() . " with Teacher ID " . $teacher->getTeacherID() . "<br
 Menampilkan object
 
 <h3>OUTPUT</h3>
+
+![Screenshot (483)](https://github.com/user-attachments/assets/04b17255-4e55-4a53-b542-358d67bc75cf)
+ 
+## ENCUPSULATION
+
