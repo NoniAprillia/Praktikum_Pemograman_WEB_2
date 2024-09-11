@@ -40,3 +40,47 @@ return $this->name;
 return: Keyword return mengembalikan nilai dari metode. Dalam hal ini, nilai yang dikembalikan adalah nilai dari atribut name.
 
 $this->name: Mengacu pada atribut name dari objek saat ini. Atribut ini menyimpan nilai yang diinginkan oleh metode getName()
+
+- SUB CLASS
+```php
+class Student extends Person {
+```
+Student adalah subclass dari Person. Ini berarti bahwa kelas Student akan mewarisi semua atribut dan metode yang didefinisikan dalam kelas Person
+
+```php
+private $studentID;
+```
+private $studentID; mendeklarasikan atribut bernama $studentID dengan visibilitas private.
+
+```php
+public function __construct($name, $studentID){
+```
+konstruktor kelas Student yang memanggil konstruktor dari kelas induk dan kemudian menginisialisasi atribut khusus kelas Student.
+
+```php
+parent::__construct($name);
+```
+memastikan bahwa atribut yang diwarisi (dalam hal ini, name) diinisialisasi dengan benar.
+
+```php
+$this->studentID=$studentID;
+```
+$studentID mengatur nilai untuk atribut studentID dalam kelas Student.
+
+```php
+$Person1 = new Student ("Noni Aprillia", " 230102040 " );
+```
+memanggil konstruktor __construct dari kelas Student. Konstruktor ini menginisialisasi atribut name dan studentID dengan nilai 
+
+```php
+echo $Person1->getName() . '<br>';
+```
+getName() adalah metode publik di kelas Person yang mengembalikan nilai dari atribut name. Metode ini diakses dari objek $Person1.
+
+```php
+echo $Person1->getstudentID() . '<br>';
+```
+mencetak nilai dari atribut studentID, yaitu "230102040"
+
+<h3>OUTPUT</h3>
+
