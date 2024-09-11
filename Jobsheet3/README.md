@@ -84,3 +84,72 @@ mencetak nilai dari atribut studentID, yaitu "230102040"
 
 <h3>OUTPUT</h3>
 
+![Screenshot (482)](https://github.com/user-attachments/assets/883aedf4-fdeb-4ffa-a166-8261fa99de95)
+
+## POLYMORPHISM
+
+- CLASS
+
+```php
+class Person {
+```
+Definisi kelas Person. Kelas adalah cetak biru untuk objek, yang menentukan atribut (variabel) dan metode (fungsi) yang akan dimiliki oleh objek yang dibuat dari kelas ini.
+
+```php
+    public $name; 
+    public function __construct($name) {
+```
+public menunjukkan bahwa atribut $name dapat diakses dari mana saja, baik dari dalam kelas Person
+
+```php
+$this->name = $name;
+```
+Baris ini menginisialisasi atribut $name dengan nilai yang diterima dari parameter $name. $this merujuk pada objek saat ini yang sedang diinisialisasi.
+
+- METODE
+
+```php
+public function getName() {
+        return $this->name;
+```
+getName biasanya digunakan untuk mengakses atau mengambil nilai dari atribut yang mungkin bersifat privat atau protected.
+
+```php
+public function setName($name) {
+```
+setName adalah nama metode ini. Dalam konvensi OOP, metode yang diawali dengan set biasanya digunakan untuk menetapkan atau mengubah nilai dari atribut objek. 
+
+```php
+$this->name = $name;
+```
+Baris ini menetapkan nilai parameter $name ke atribut name dari objek. Dengan kata lain, ini mengubah nilai atribut name sesuai dengan nilai yang diterima dari parameter.
+
+```php
+class Student extends Person {
+    private $studentID;
+```
+class Student: Ini mendefinisikan kelas Student.
+extends Person: Kata kunci extends menunjukkan bahwa Student adalah subclass (kelas turunan) dari kelas Person
+
+```php
+class Teacher extends Person {
+    private $teacherID;
+```
+class Teacher: Mendefinisikan kelas Teacher. Kelas ini merupakan subclass (kelas turunan) dari kelas Person.
+extends Person: Kata kunci extends menunjukkan bahwa Teacher adalah subclass dari Person, yang berarti Teacher mewarisi atribut dan metode dari Person.
+
+```php
+$student = new Student("Alva Rezal", "230102039");
+$teacher = new Teacher("Meilita Ayu", "230102038");
+$student = new Student("Probo Widado", "230102041");
+```
+Membuat Object
+
+```php
+echo $student->getName() . " with Student ID " . $student->getStudentID() . "<br>";
+echo $teacher->getName() . " with Teacher ID " . $teacher->getTeacherID() . "<br>";
+echo $student->getName() . " with Teacher ID " . $teacher->getTeacherID() . "<br>";
+```
+Menampilkan object
+
+<h3>OUTPUT</h3>
