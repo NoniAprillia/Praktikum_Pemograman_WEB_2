@@ -124,6 +124,8 @@ $this->name = $name;
 ```
 Baris ini menetapkan nilai parameter $name ke atribut name dari objek. Dengan kata lain, ini mengubah nilai atribut name sesuai dengan nilai yang diterima dari parameter.
 
+- SUB CLASS
+
 ```php
 class Student extends Person {
     private $studentID;
