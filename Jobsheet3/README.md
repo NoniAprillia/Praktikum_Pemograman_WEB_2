@@ -207,3 +207,4 @@ Membuat objek Student baru dengan nama "Noni Aprillia" dan ID mahasiswa "2301020
 
 <h3>OUTPUT</h3>
 
+![Screenshot (484)](https://github.com/user-attachments/assets/501239fb-2397-4aff-850a-52753c0a13ee)
