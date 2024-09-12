@@ -40,9 +40,9 @@ Method atau metode di dalam kelas digunakan untuk melakukan operasi data dari ob
 <h3>1. Encapsulation</h3>
 
 - Definisi:
-Enkapsulasi adalah prinsip yang membungkus data (atribut) dan metode (fungsi) yang beroperasi pada data tersebut dalam satu unit, yaitu objek. Ini menyembunyikan detail implementasi internal dari objek dan hanya menyediakan antarmuka publik untuk interaksi.
+Enkapsulasi adalah prinsip yang membungkus data (atribut) dan metode (fungsi) yang beroperasi pada data tersebut menjadi satu, yaitu objek. Encupsuation menyembunyikan detail implementasi dan hanya dapat di akses pada metode tertentu.
 
-- Tujuan: Mencegah akses langsung ke data penting dan mencegah modifikasi yang tidak diinginkan dari luar objek, meningkatkan keamanan dan integritas data.
+- Tujuan: Mencegah akses langsung ke data penting dan mencegah modifikasi yang tidak diinginkan dari luar objek, sehingga data kita akan terjamin ke amanan nya
 
 ```php
 <?php
@@ -52,7 +52,7 @@ class Mahasiswa {
     private $nim;
     private $jurusan;
 ```
-Kelas Mahasiswa: Ini adalah definisi dari sebuah kelas yang bernama Mahasiswa. Kelas adalah blueprint atau template untuk membuat objek.
+Kelas Mahasiswa adalah definisi dari sebuah kelas yang bernama Mahasiswa. Kelas adalah blueprint atau template untuk membuat objek.
 
 Dalam Class Mahasiswa memiliki Atribut Privat:
 
@@ -102,13 +102,16 @@ $Mahasiswa1 = new Mahasiswa();
 $Mahasiswa1->setNama("Aprillia");
 $Mahasiswa1->setNim("230104020");
 $Mahasiswa1->setJurusan("KOMBIS");
+```
 
-// Menggunakan metode getter untuk menampilkan informasi mahasiswa
+mensetting atau memodifikasi nama , nim, dan jurusan yang ada dalam kelas Mahasiswa
+
+```php
 echo "Nama: " . $Mahasiswa1->getNama() . '<br>';
 echo "NIM: " . $Mahasiswa1->getNim() . '<br>';
 echo "Jurusan: " . $Mahasiswa1->getJurusan() . '<br><br>';
 ```
-Menampilkan output nya 
+Menampilkan output dari kelas Mahasiswa
 
 <h3>OUTPUT ENCUPSULATION</h3>
 
@@ -116,7 +119,7 @@ Menampilkan output nya
 
 <h3>2. Inheritance</h3>
 
-Definisi : Pewarisan adalah mekanisme di mana sebuah kelas baru (subkelas atau kelas turunan) dapat mewarisi atribut dan metode dari kelas yang sudah ada 
+definisi : pewarisan atau turunan properti dari kelas lain nya atau kelas yang sudah ada atau biasa kita sebut sebagai induk kelas
 
 Manfaat : Memudahkan pengorganisasian kode dan memungkinkan pengembangan yang lebih efisien dengan mendefinisikan kelas yang lebih umum dan kelas yang lebih spesifik.
 
@@ -161,7 +164,7 @@ memanggil data nama dan matakuliah serta menampilkan pada output
 
 <h3> 3. Polymorphism </h3>
 
-Definisi: Polimorfisme memungkinkan objek dari berbagai kelas untuk diperlakukan sebagai objek dari kelas yang sama melalui antarmuka yang sama. Ada dua jenis polimorfisme: polimorfisme compile-time (method overloading) dan polimorfisme runtime (method overriding).
+Definisi: Polymorphism atau bahasa kita nya adalah memiliki banyak bentuk. dalam oop polymorphism memiliki banyak implementasi yang berbeda tetapi menggunakan satu metode sama 
 
 Manfaat: Mempermudah penggunaan objek dari berbagai kelas dengan cara yang konsisten dan memungkinkan implementasi metode yang berbeda tergantung pada jenis objek.
 
@@ -191,8 +194,7 @@ class Dosen extends Pengguna {
     }
 }
 ```
-- Method Overriding: Mahasiswa dan Dosen mengubah implementasi dari metode aksesFitur() yang diwarisi dari Pengguna.
-- Polimorfisme: Jika kita memiliki variabel bertipe Pengguna yang menunjuk ke objek Mahasiswa atau Dosen, metode aksesFitur() yang dipanggil adalah versi yang di-override oleh kelas tersebut.
+Metode overriding kita gunakan untuk mengalihkan fungsi dari induk nya jadi sang anak menginginkan outputan yang berbeda dari sang induk
 
 <h3>OUTPUT POLYMORPHISM</h3>
 
@@ -200,8 +202,7 @@ class Dosen extends Pengguna {
 
 <h3> 4. Abstraction</h3>
 
-Definisi: Abstraksi adalah proses menyembunyikan detail implementasi yang kompleks dan hanya menampilkan fungsionalitas yang relevan kepada pengguna. Dalam OOP, abstraksi dicapai melalui penggunaan kelas dan antarmuka yang menyembunyikan detail yang tidak perlu.
-
+Definisi: Abstraksi adalah proses menyembunyikan detail implementasi yang kompleks dan hanya menampilkan fungsi yang penting 
 Manfaat: Memudahkan pengembangan dan pemeliharaan kode dengan menyediakan pandangan yang lebih sederhana dan lebih jelas dari sistem yang kompleks.
 
 ```php
