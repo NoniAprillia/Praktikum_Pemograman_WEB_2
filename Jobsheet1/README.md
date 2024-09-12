@@ -109,7 +109,7 @@ Setter adalah metode yang digunakan untuk mengubah atau menetapkan nilai atribut
 
 <h3>OUTPUT ENCUPSULATION</h3>
 
-![Screenshot (469)](https://github.com/user-attachments/assets/3fa0128c-98e8-42a5-b2fd-f18d63ac0cd2)
+![Screenshot (489)](https://github.com/user-attachments/assets/23de31ec-3102-4f8f-8418-221773248ead)
 
 <h3>2. Inheritance</h3>
 
