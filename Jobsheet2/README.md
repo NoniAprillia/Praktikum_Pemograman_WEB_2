@@ -191,7 +191,7 @@ $mahasiswa1->tampilkanData(): Memanggil kembali metode tampilkanData pada objek 
 
 <h3>OUTPUT</h3>
 
-![Screenshot (477)](https://github.com/user-attachments/assets/787a3f4c-a7b0-4ae3-8cab-158853318561)
+![Screenshot (491)](https://github.com/user-attachments/assets/4ca245de-f263-4130-ac3e-97ba9e5b8bf9)
 
 <h3>TUGAS</h3>
 
