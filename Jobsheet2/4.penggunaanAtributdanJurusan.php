@@ -15,7 +15,7 @@ class Mahasiswa {
 
     // Metode untuk menampilkan data mahasiswa
     public function tampilkanData() {
-        return "<br> Nama: $this->nama </br> <br> NIM: $this->nim </br> <br> Jurusan: $this->jurusan </br>";
+        return "<br> Nama: $this->nama </br> <br> NIM: $this->nim </br> Jurusan: $this->jurusan <hr>";
     }
 
     // Metode setter untuk mengupdate nilai nim
@@ -28,13 +28,13 @@ class Mahasiswa {
 $mahasiswa1 = new Mahasiswa("Noni Aprillia", "230102040", "Kombis");
 
 // Menampilkan data awal
-echo "Data Awal: ";
+echo "Data Nim Awal:";
 echo $mahasiswa1->tampilkanData();
 
 // Mengupdate nilai nim menggunakan metode setter
 $mahasiswa1->setNim("230102041");
 
 // Menampilkan data setelah pembaruan
-echo "Data Setelah Pembaruan: ";
+echo "Data Nim Setelah Pembaruan:";
 echo $mahasiswa1->tampilkanData();
 ?> 
