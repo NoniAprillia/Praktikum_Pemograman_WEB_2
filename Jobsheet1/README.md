@@ -60,17 +60,6 @@ Dalam Class Mahasiswa memiliki Atribut Privat:
 - private $nim;: Variabel untuk menyimpan Nomor Induk Mahasiswa (NIM). Sama seperti nama, akses ke nim dibatasi hanya untuk metode di dalam kelas.
 - private $jurusan;: Variabel untuk menyimpan jurusan mahasiswa. Juga menggunakan akses private.
 
-```php
-public function __construct($nama, $nim, $jurusan) {
-        $this->nama = $nama;
-        $this->nim = $nim;
-        $this->jurusan = $jurusan;
-```
-$this->nama = $nama;:
-
-$this: Merujuk pada instansiasi saat ini dari kelas Mahasiswa.
-$this->nama: Mengacu pada atribut nama dalam kelas.
-
 Metode dalam OOP : 
 
 - GETTER
@@ -106,6 +95,20 @@ Setter adalah metode yang digunakan untuk mengubah atau menetapkan nilai atribut
     }
 }
 ```
+
+```php
+$Mahasiswa1 = new Mahasiswa();
+
+$Mahasiswa1->setNama("Aprillia");
+$Mahasiswa1->setNim("230104020");
+$Mahasiswa1->setJurusan("KOMBIS");
+
+// Menggunakan metode getter untuk menampilkan informasi mahasiswa
+echo "Nama: " . $Mahasiswa1->getNama() . '<br>';
+echo "NIM: " . $Mahasiswa1->getNim() . '<br>';
+echo "Jurusan: " . $Mahasiswa1->getJurusan() . '<br><br>';
+```
+Menampilkan output nya 
 
 <h3>OUTPUT ENCUPSULATION</h3>
 
