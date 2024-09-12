@@ -4,6 +4,12 @@ Nama : Noni Aprillia Setyani <br>
 Kelas : TI 2B <br>
 Nim : 230102040
 
+Daftar Isi 
+
+- [JOBSHEET 1](https://github.com/NoniAprillia/Praktikum_Pemograman_WEB_2/tree/main/Jobsheet1)
+- [JOBSHEET 2](https://github.com/NoniAprillia/Praktikum_Pemograman_WEB_2/tree/main/Jobsheet2)
+- [JOBSHEET 3](https://github.com/NoniAprillia/Praktikum_Pemograman_WEB_2/tree/main/Jobsheet3)
+ 
 # OOP ( Object-Oriented Programming )
 
 ## Pendahuluan
