@@ -123,16 +123,15 @@ Manfaat : Memudahkan pengorganisasian kode dan memungkinkan pengembangan yang le
 ```php
 <?php
 class Pengguna {
-    protected $nama;
-    public function __construct($nama) {
-        $this->nama = $nama;
-    }
+    public $nama;
+
     public function getNama() {
         return $this->nama;
     }
 }
 ```
-Protected adalah atribut yang hanya bisa diakses di dalam kelas itu sendiri dan kelas-kelas yang mewarisi kelas ini (subkelas), tetapi tidak bisa diakses dari luar kelas secara langsung.
+
+class pengguna menggunakan aksesbiliti public karena kita tidak memakai constuct jadi untuk memanggil di luar kelas kita menggunakan public 
 
 ```php
 class Dosen extends Pengguna {
@@ -152,7 +151,7 @@ $Pengguna1 = new Dosen();
 $Pengguna1->nama="Abda`u <br>";
 $Pengguna1->mataKuliah="Pemograman PWEB";
 
-echo $Pengguna1->tampilData()
+echo $Pengguna1->tampilData();
 ```
 memanggil data nama dan matakuliah serta menampilkan pada output
 
