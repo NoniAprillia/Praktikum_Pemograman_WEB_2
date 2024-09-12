@@ -157,7 +157,7 @@ getNama() adalah metode yang didefinisikan di kelas Pengguna. Karena $Pengguna1 
 
 <h3>OUTPUT INHERITANCE</h3>
 
-![Screenshot (470)](https://github.com/user-attachments/assets/93f40273-13ae-4e3e-a55a-58b2279f3bd3)
+![Screenshot (490)](https://github.com/user-attachments/assets/d8459bc4-f32b-43b0-81eb-8ec52ac7c580)
 
 <h3> 3. Polymorphism </h3>
 
