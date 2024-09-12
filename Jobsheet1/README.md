@@ -136,24 +136,25 @@ Protected adalah atribut yang hanya bisa diakses di dalam kelas itu sendiri dan 
 
 ```php
 class Dosen extends Pengguna {
-    private $mataKuliah;
-    public function __construct($nama, $mataKuliah) {
-        parent::__construct($nama);
-        $this->mataKuliah = $mataKuliah;
-    }
-    public function getMatakuliah() {
-        return $this->mataKuliah;
-    }
-}
+    public $mataKuliah;
+
+    // Method getter untuk mendapatkan mataKuliah
+    public function tampilData() {
+    echo $this->getNama();
+    echo $this->mataKuliah;
 ```
+
 extends adalah kata kunci yang digunakan untuk mendefinisikan pewarisan kelas, extends seperti memanggil induk atau ibu nya
 
 ```php
-echo $Pengguna1->getNama() . '<br>';
-echo $Pengguna1->getMatakuliah() . '<br>'; // Output: Pemrograman Web 2
-?>
+$Pengguna1 = new Dosen();
+
+$Pengguna1->nama="Abda`u <br>";
+$Pengguna1->mataKuliah="Pemograman PWEB";
+
+echo $Pengguna1->tampilData()
 ```
-getNama() adalah metode yang didefinisikan di kelas Pengguna. Karena $Pengguna1 adalah objek Dosen yang mewarisi dari Pengguna,
+memanggil data nama dan matakuliah serta menampilkan pada output
 
 <h3>OUTPUT INHERITANCE</h3>
 
